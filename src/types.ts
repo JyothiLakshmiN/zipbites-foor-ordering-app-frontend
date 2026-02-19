@@ -12,7 +12,7 @@ export type FoodItem = {
     name: string;
     description: string;
     price: number;
-    imageFile: string;
+    imageUrl: string;
 };
 
 export type MenuItem = {
@@ -34,3 +34,12 @@ export type Restaurant = {
   imageUrl: string;
   lastUpdated: string;
 };
+
+export type RestaurantSearchResponse = {
+  data: Restaurant[];
+  pagination: {
+    total: number,
+    page: number,
+    pages: number
+  }
+}
