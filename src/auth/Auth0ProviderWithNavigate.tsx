@@ -13,13 +13,14 @@ const Auth0ProviderWithNavigate = ({ children }: Auth0ProviderWithNavigateProps)
     const redirectUri = import.meta.env.VITE_AUTH0_REDIRECT_URI;
     const audience = import.meta.env.VITE_AUTH0_AUDIENCE;
     
+
     if(!domain || !clientId || !redirectUri || !audience) {
         throw new Error("Unable to initialize Auth0");
     }
 
-    const onRedirectCallback = () => {
-        navigate("/auth-callback");
-    }
+    const onRedirectCallback = (appState?: { returnTo?: string }) => {
+        navigate(appState?.returnTo || "/auth-callback");
+    };
 
     return (
         <Auth0Provider domain={domain} clientId={clientId} authorizationParams={{
