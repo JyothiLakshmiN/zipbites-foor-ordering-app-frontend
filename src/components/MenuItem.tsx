@@ -1,5 +1,5 @@
 import type { MenuItem } from "@/types";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 type Props = {
     menuItem: MenuItem,
