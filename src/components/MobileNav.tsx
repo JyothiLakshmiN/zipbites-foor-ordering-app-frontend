@@ -15,7 +15,7 @@ const MobileNav = () => {
                 <SheetTitle>
                     {isAuthenticated ? <span className="font-bold flex items-center gap-2">
                         <CircleUserRound className="text-orange-500" size={20} />
-                        {user?.email}
+                        {user?.name}
                     </span> : <span>Welcome to ZipBites.com!</span>}
                 </SheetTitle>
                 <Separator className="my-4"/>

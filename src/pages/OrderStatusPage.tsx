@@ -16,8 +16,9 @@ const OrderStatusPage = () => {
 
     return (
         <div className="space-y-10">
+            <p className="flex justify-center text-4xl">Thank you for your order!</p>
             {orders.map((order) => (
-                <div className="space-y-10 bg-gray-50 p-10 rounded-lg">
+                <div className="space-y-10 bg-gray-50 p-2 rounded-lg md:p-10">
                     <OrderStatusHeader order={order} />
                     <div className="grid gap-10 md:grid-cols-2 ">
                         <OrderStatusDetail  order={order}/>
