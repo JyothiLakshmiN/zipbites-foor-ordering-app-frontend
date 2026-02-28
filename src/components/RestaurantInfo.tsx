@@ -14,7 +14,7 @@ const RestaurantInfo = ({restaurant}: Props) => {
                     <CardTitle className="text-3xl font-bold tracking-tight">{restaurant.restaurantName}</CardTitle>
                     <CardDescription>{restaurant.city} , {restaurant.country}</CardDescription>
                 </CardHeader>
-                <CardContent className="flex">
+                <CardContent className="flex flex-wrap">
                     {restaurant.cuisines.map((item, idx) => (
                         <span className="flex">
                             <span>{item}</span>

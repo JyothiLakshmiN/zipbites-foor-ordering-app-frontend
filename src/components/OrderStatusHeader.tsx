@@ -33,7 +33,7 @@ const OrderStatusHeader = ({ order }: Props) => {
                     Order Status: {getOrderStatusInfo().label}
                 </span>
                 <span>
-                    Expected by: {getExpectedDelivery()}
+                    {getOrderStatusInfo().value == "delivered" ? "Delivered" : `Expected by: ${getExpectedDelivery()}`}
                 </span>
             </h1>
             <Progress className="animate-pulse" value={getOrderStatusInfo().progressValue}/>

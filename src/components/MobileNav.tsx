@@ -16,11 +16,10 @@ const MobileNav = () => {
                     {isAuthenticated ? <span className="font-bold flex items-center gap-2">
                         <CircleUserRound className="text-orange-500" size={20} />
                         {user?.email}
-                    </span> : <span>Welcome to MearnEats.com!</span>}
-                    
+                    </span> : <span>Welcome to ZipBites.com!</span>}
                 </SheetTitle>
                 <Separator className="my-4"/>
-                <SheetDescription className="flex">
+                <SheetDescription className="flex flex-col gap-1">
                     {isAuthenticated ? <MobileNavLinks /> : 
                     <Button
                         className="flex-1 font-bold bg-orange-500 hover:bg-orange-600 text-white"
